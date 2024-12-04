@@ -279,7 +279,7 @@ def get_wf_slab(
     # Add optional molecules workflow
     if add_molecules_in_box:
         molecule_wf = get_wf_molecules(adsorbates, db_file=db_file, vasp_cmd=vasp_cmd)
-        wf.append_wf(molecule_wf)
+        wf.append_wf(molecule_wf,[])
 
     return wf
 
